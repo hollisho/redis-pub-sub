@@ -1,6 +1,6 @@
 <?php
 
-namespace RedisPubSub\lib\client;
+namespace RedisPubSub\lib\clients;
 
 /**
  * Redis客户端

@@ -1,8 +1,8 @@
 <?php
 
 namespace RedisPubSub;
-use RedisPubSub\lib\client\RedisClient;
-use RedisPubSub\lib\exception\RedisException;
+use RedisPubSub\lib\clients\RedisClient;
+use RedisPubSub\lib\exceptions\RedisException;
 
 
 /**
