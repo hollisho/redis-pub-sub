@@ -11,6 +11,13 @@ namespace RedisPubSub\lib\clients;
 class RedisClient
 {
     private $_client;
+
+    /**
+     * 缓存连接参数
+     * @var integer
+     * @access protected
+     */
+    private $options = [];
     /**
      * RedisClient constructor.
      * @param array $options
