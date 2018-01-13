@@ -1,10 +1,9 @@
 <?php
 
 namespace RedisPubSub;
+use RedisPubSub\lib\client\RedisClient;
+use RedisPubSub\lib\exception\RedisException;
 
-
-use RedisPubSub\Client\RedisClient;
-use RedisPubSub\Exception\RedisException;
 
 /**
  * Class RedisPubSub
@@ -35,15 +34,14 @@ class RedisPubSub
      * 只能通过静态方法获得该类的对象(单例模式)
      * @author Hollis Ho <he_wenzhi@126.com>
      * @param array $options
-     * @return null|\Redis
+     * @return null|RedisPubSub
      */
     public static function getInstance($options = [])
     {
         static $obj = null;
         if ($obj == null) {
             $redis = RedisClient::getInstance($options);
-            $obj_tmp = new self($redis);
-            $obj = $obj_tmp->_client;
+            $obj = new self($redis);
         }
         return $obj;
     }

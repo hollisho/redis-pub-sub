@@ -1,6 +1,6 @@
 <?php
 
-namespace RedisPubSub\Exception;
+namespace RedisPubSub\lib\exception;
 
 /**
  * Class RedisException

@@ -1,6 +1,6 @@
 <?php
 
-namespace RedisPubSub\Client;
+namespace RedisPubSub\lib\client;
 
 /**
  * Redis客户端
@@ -10,6 +10,7 @@ namespace RedisPubSub\Client;
  */
 class RedisClient
 {
+    private $_client;
     /**
      * RedisClient constructor.
      * @param array $options
@@ -32,11 +33,11 @@ class RedisClient
         $this->options['prefix'] = isset($options['prefix']) ? $options['prefix'] : '';
         $this->options['length'] = isset($options['length']) ? $options['length'] : 0;
         $func                    = $options['persistent'] ? 'pconnect' : 'connect';
-        $this->handler           = new \Redis; false === $options['timeout'] ?
-        $this->handler->$func($options['host'], $options['port']) :
-        $this->handler->$func($options['host'], $options['port'], $options['timeout']);
-        $options['database'] && $this->handler->select($options['database']);
-        $options['auth'] && $this->handler->auth($options['auth']);
+        $this->_client           = new \Redis; false === $options['timeout'] ?
+        $this->_client->$func($options['host'], $options['port']) :
+        $this->_client->$func($options['host'], $options['port'], $options['timeout']);
+        $options['database'] && $this->_client->select($options['database']);
+        $options['auth'] && $this->_client->auth($options['auth']);
     }
 
     /**
@@ -53,7 +54,7 @@ class RedisClient
             $obj = new RedisClient($options);
             $_instance[$guid] = $obj;
         }
-        return $_instance[$guid];
+        return $_instance[$guid]->_client;
     }
 
     /**
