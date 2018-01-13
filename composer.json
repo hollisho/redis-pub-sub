@@ -1,0 +1,16 @@
+{
+    "name": "hollis_ho/redis-pub-sub",
+    "description": "Thinkphp3.2 Redis pub/sub(Publish,Subscribe)",
+    "authors": [
+        {
+            "name": "Hollis Ho",
+            "email": "he_wenzhi@126.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "top-think/thinkphp": ">=3.2.0"
+
+    }
+}
