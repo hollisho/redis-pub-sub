@@ -11,7 +11,7 @@
     "support": {  
          "source": "https://github.com/hollisho/tp-redis-queue"  
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0"
     }
