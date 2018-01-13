@@ -1,5 +1,5 @@
 {
-    "name": "hollis_ho/redis-pub-sub",
+    "name": "hollisho/redis-pub-sub",
     "description": "Redis pub/sub(Publish,Subscribe)",
     "authors": [
         {
