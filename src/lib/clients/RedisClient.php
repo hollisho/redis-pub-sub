@@ -11,13 +11,6 @@ namespace RedisPubSub\lib\clients;
 class RedisClient
 {
     private $_client;
-
-    /**
-     * 缓存连接参数
-     * @var integer
-     * @access protected
-     */
-    private $options = [];
     /**
      * RedisClient constructor.
      * @param array $options
@@ -43,8 +36,8 @@ class RedisClient
         $this->_client           = new \Redis; false === $options['timeout'] ?
         $this->_client->$func($options['host'], $options['port']) :
         $this->_client->$func($options['host'], $options['port'], $options['timeout']);
-        $options['database'] && $this->_client->select($options['database']);
         $options['auth'] && $this->_client->auth($options['auth']);
+        $options['database'] && $this->_client->select($options['database']);
     }
 
     /**
