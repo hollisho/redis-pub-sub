@@ -41,7 +41,8 @@ class RedisPubSub
     {
         static $obj = null;
         if ($obj == null) {
-            $obj_tmp = new self($options);
+            $redis = RedisClient::getInstance($options);
+            $obj_tmp = new self($redis);
             $obj = $obj_tmp->_client;
         }
         return $obj;
