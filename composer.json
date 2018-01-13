@@ -1,5 +1,5 @@
 {
-    "name": "hollis_ho/redis-pub-sub",
+    "name": "hollis_ho/tp-redis-queue",
     "description": "Thinkphp3.2 Redis pub/sub(Publish,Subscribe)",
     "authors": [
         {
@@ -9,7 +9,7 @@
     ],
     "license": "MIT",   
     "support": {  
-         "source": "https://github.com/hollisho/redis-pub-sub"  
+         "source": "https://github.com/hollisho/tp-redis-queue"  
     },
     "minimum-stability": "stable",
     "require": {
