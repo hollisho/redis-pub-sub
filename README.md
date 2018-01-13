@@ -1,1 +1,1 @@
-# redis publish subscribe for thinkphp3.2
+# redis publish subscribe
