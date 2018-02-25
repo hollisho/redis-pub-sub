@@ -1,6 +1,6 @@
 <?php
 
-namespace RedisPubSub\lib\exceptions;
+namespace hollisho\redischannel\lib\exceptions;
 
 /**
  * Class RedisException

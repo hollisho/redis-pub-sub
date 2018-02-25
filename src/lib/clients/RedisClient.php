@@ -1,11 +1,11 @@
 <?php
 
-namespace RedisPubSub\lib\clients;
+namespace hollisho\redischannel\lib\clients;
 
 /**
  * Redis客户端
  * Class RedisClient
- * @package RedisPubSub
+ * @package hollisho\redischannel\lib\clients
  * @author Hollis Ho
  */
 class RedisClient

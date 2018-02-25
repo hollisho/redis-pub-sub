@@ -1,13 +1,13 @@
 <?php
 
-namespace RedisPubSub;
-use RedisPubSub\lib\clients\RedisClient;
-use RedisPubSub\lib\exceptions\RedisException;
+namespace hollisho\redischannel;
+use hollisho\redischannel\lib\clients\RedisClient;
+use hollisho\redischannel\lib\exceptions\RedisException;
 
 
 /**
  * Class RedisPubSub
- * @package RedisPubSub
+ * @package hollisho\redischannel
  * @author Hollis Ho
  */
 class RedisPubSub
