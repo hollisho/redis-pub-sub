@@ -2,6 +2,8 @@
 
 namespace hollisho\redischannel\lib\clients;
 
+use hollisho\redischannel\lib\exceptions\RedisException;
+
 /**
  * Redis客户端
  * Class RedisClient
@@ -21,12 +23,12 @@ class RedisClient
     /**
      * RedisClient constructor.
      * @param array $options
-     * @throws \RedisException
+     * @throws RedisException
      */
     public function __construct($options = array())
     {
         if (!extension_loaded('redis')) {
-            throw new \RedisException('not support redis');
+            throw new RedisException('not support redis');
         }
         $options = array_merge([
             'host'       => $options['host'] ?: '127.0.0.1',
